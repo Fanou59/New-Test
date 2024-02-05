@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="output.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div
+      class="flex h-72 items-center justify-center bg-opacity-20 bg-cover bg-center"
+      style="background-image: url('test.webp')"
+    >
+      <h1 class="text-4xl font-extrabold uppercase tracking-widest">
+        Affichage des données des nutriments
+      </h1>
+    </div>
+    <div class="container mx-auto mt-4 flex justify-center">
+      <form action="">
+        <div>
+          <label class="mr-2 text-xl tracking-wider" for="Aliments"
+            >Entrez le code barre</label
+          >
+          <input class="rounded-xl bg-green-50 px-2 py-2" type="number" />
+        </div>
+      </form>
+    </div>
+    <div
+      class="container mx-auto mt-4 flex min-h-64 flex-col justify-center rounded-xl border-solid bg-green-100 drop-shadow-xl"
+    >
+      <div class="mx-auto">
+        <p id="nom" class="text-bold text-xl tracking-widest"></p>
+        <p id="nutriscore" class="text-bold text-xl tracking-widest"></p>
+        <p id="allergene" class="text-bold text-xl tracking-widest"></p>
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
