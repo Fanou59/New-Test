@@ -3,6 +3,7 @@ const aliment = document.querySelector('input')
 const nom = document.querySelector('#nom')
 const nutriscore = document.querySelector('#nutriscore')
 const allergene = document.querySelector('#allergene')
+const image = document.querySelector('img')
 
 const apiUrl = 'https://world.openfoodfacts.net/api/v0/product/'
 
@@ -24,11 +25,13 @@ form.addEventListener('submit', (e) => {
         const productName = data.product.product_name
         const nutriscoreData = data.product.nutriscore_grade
         const allergens = tagsString(data.product.allergens)
+        const imgSrc = data.product.image_front_url
 
         nom.innerHTML = `Nom du produit : ${productName}`
         nutriscore.innerHTML = `Nutriscore : ${nutriscoreData}`
 
         allergene.innerHTML = `Allergènes : ${allergens}`
+        image.src = `${imgSrc}`
 
         console.log(data)
       } else {
